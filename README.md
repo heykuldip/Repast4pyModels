@@ -9,7 +9,8 @@ Covid-19 has been detected in a local deer population. This project aims to comb
 This guide is for GMU members who have access to the Slurm/Hopper cluster.
 
 Here's how you run this on Hopper:
-- Add something here once you figure it out. 
+- [Log into Hopper](https://wiki.orc.gmu.edu/mkdocs/Logging_Into_Hopper/)
+- 
 
 # How to Contribute
 Here's how you contribute to this project:

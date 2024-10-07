@@ -10,7 +10,14 @@ This guide is for GMU members who have access to the Slurm/Hopper cluster.
 
 Here's how you run this on Hopper:
 - [Log into Hopper](https://wiki.orc.gmu.edu/mkdocs/Logging_Into_Hopper/)
-- 
+- Load Git module, pull repo, and run env code:
+```
+module load git
+git clone https://github.com/heykuldip/Repast4pyModels.git
+cd Repast4pyModels
+chmod +x *.sh
+./hopper_setup.sh
+```
 
 # How to Contribute
 Here's how you contribute to this project:

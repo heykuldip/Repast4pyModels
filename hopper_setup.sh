@@ -10,7 +10,7 @@ echo "============================="
 echo "Loading modules..."
 module load gnu10
 module load openmpi
-module load git
+# module load git
 
 echo "Creating conda environment..."
 source miniconda/bin/activate 

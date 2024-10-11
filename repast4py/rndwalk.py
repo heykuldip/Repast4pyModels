@@ -135,7 +135,7 @@ class Model:
 
         tick = self.runner.schedule.tick
 
-        with open('./output/agent_log.csv', 'a', newline='') as agent_log:
+        with open(params['agent_log_file'], 'a', newline='') as agent_log:
             writer = csv.writer(agent_log, delimiter=',')
             for walker in self.context.agents():
                 row=[tick, walker.id, walker.uid[2]]
@@ -154,7 +154,7 @@ class Model:
         self.dbuildings = {}
 
         # --- Reading the input file
-        file_path='./input/input_buildings.csv'
+        file_path=params['input_buildings']
         dframe = pd.read_csv(file_path)
         self.dbuildings = {dframe.iloc[i]['building_id']: 
                                 {"type": int(dframe.iloc[i]['building_type']), 
@@ -174,7 +174,7 @@ class Model:
 
 def run(params: Dict):
     # logging
-    with open('./output/agent_log.csv', 'w', newline='') as agent_log:
+    with open(params['agent_log_file'], 'w', newline='') as agent_log:
         writer = csv.writer(agent_log, delimiter=',')
         row=['tick','agent_id', 'rank']
         writer.writerow(row)     

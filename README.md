@@ -1,22 +1,33 @@
 # Repast4pyModels
 
-This is a repository containing scripts to setup the Repast4py environmnet in GMU's Hopper high performance cluster. The goal being to run several distributed agent based models.
+This is a repository containing scripts to setup the Repast4py environment in GMU's Hopper high performance cluster. The goal being to run several distributed agent based models.
 
 ## Sub Project: Deer Covid modelling
 Covid-19 has been detected in a local deer population. This project aims to combine deer behaviour models and human population models in order to run scenarious of human <> deer infections. 
 
 # Quick Start
+
 This guide is for GMU members who have access to the Slurm/Hopper cluster.
+
+### With miniconda:
 
 Here's how you run this on Hopper:
 - [Log into Hopper](https://wiki.orc.gmu.edu/mkdocs/Logging_Into_Hopper/)
-- Load Git module, pull repo, and run env code:
+- [Install miniconda](https://wiki.orc.gmu.edu/mkdocs/Conda_Environments_on_Hopper/) 
+- Load Git module and pull repo:
 ```
 module load git
 git clone https://github.com/heykuldip/Repast4pyModels.git
-cd Repast4pyModels
-chmod +x *.sh
-./hopper_setup.sh
+```
+- Setup conda environment: 
+- Run demo script
+
+### With Docker/Singularity
+
+To run this on the Hopper HPC you need to pull the Repast4Py docker container, convert it to a Singularity file, and run the code in this repo using the Singularity file.
+
+```
+
 ```
 
 # How to Contribute
@@ -30,5 +41,6 @@ Hopper can use singularity containers to run code. It also looks like it's not t
 
 * [Hopper Singularity README](https://wiki.orc.gmu.edu/mkdocs/Containerized_jobs_on_Hopper/)
 * [Nvidia Python Containers](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/distroless/containers/python/tags)
+* [Building your own](https://wiki.orc.gmu.edu/mkdocs/Containerized_jobs_on_Hopper/#building-your-own-containers)
 * [NASA guide on converting Docker > Singularity](https://www.nas.nasa.gov/hecc/support/kb/converting-docker-images-to-singularity-for-use-on-pleiades_643.html)
 
